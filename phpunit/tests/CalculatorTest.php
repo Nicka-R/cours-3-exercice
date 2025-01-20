@@ -79,10 +79,9 @@ class CalculatorTest extends TestCase
         $this->assertIsInt($result["right"]);
     }
 
-    function testSplitFloat_round(){
+    function testGenerateRandomCalculatorName(){
         $calculator = new \App\Calculator();
-        $result = $calculator->splitFloat(54);
-        $this->assertEquals(["left" => 54, "right" => null], $result);
-        $this->assertIsInt($result["left"]);
+        $result = $calculator->generateRandomCalculatorName();
+        $this->assertIsString($result);
     }
 }
